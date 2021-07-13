@@ -1,4 +1,4 @@
-Project: Online to Do List
+Project: Online To Do List Web Application
 
 Author: Richard Saldanha
 
