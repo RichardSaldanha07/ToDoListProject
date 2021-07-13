@@ -1,6 +1,8 @@
 
-Project: Online to Do List
-Author: Richard Saldanha
+Project: 
+Online to Do List
+Author: 
+Richard Saldanha
 Project Environment:
 1.	IDE: Visual Studio 2019
 2.	Project Type: ASP.NET Web Application (.NET Framework)
