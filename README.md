@@ -9,7 +9,8 @@
 6. Two Test Users:
 1. Email : test@email.com , password: pwd123
 2. Email : user@email.com , password: Power@12345
-#Technology: ASP.NET MVC, C#, Entity Framework, Razor, HTML, CSS, Bootstrap, JavaScript, jQuery, AJAX
+
+Technology: ASP.NET MVC, C#, Entity Framework, Razor, HTML, CSS, Bootstrap, JavaScript, jQuery, AJAX
 
 
 
