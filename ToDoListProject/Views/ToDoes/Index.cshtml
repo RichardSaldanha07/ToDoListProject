@@ -1,0 +1,35 @@
+﻿@model ToDoListProject.Models.ToDo
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3> Add the Activities to your To Do List </h3>
+<div id="tableDiv"></div>
+
+@*Use of AJAX Helpers in the Framework*@
+<div id="MyToDoCreateForm">
+    @using (Ajax.BeginForm("AJAXCreatedToDo", "ToDoes", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        UpdateTargetId = "tableDiv"
+    }))
+    {
+    <div class="form-group">
+        @Html.AntiForgeryToken()
+        <div>
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.ToDoDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ToDoDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    }
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Custom_Scripts/BuildTable.js"></script>
+    @Scripts.Render("~/bundles/jqueryval") @* Loading all the scripts for validation with JQuery*@
+}
